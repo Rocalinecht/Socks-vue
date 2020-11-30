@@ -5,7 +5,7 @@ var app =new Vue({
     data:{
         product:'Socks',
         image:"/assets/socks-green.jpg",
-        inStock:true,
+        inStock:false,
         details:['80% cotton', '20% polyester', "Gender-neutral"],
         variants:[
             {
@@ -20,6 +20,10 @@ var app =new Vue({
             }
         ],
         cart:0,
+        styleOutStock: {
+            color:"red",
+            fontWeight:"800"
+        }
     },
     methods:{
         addToCart: function (){
