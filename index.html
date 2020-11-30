@@ -15,8 +15,8 @@
             <div class="product-image">
                 <img v-bind:src="image" >
             </div>
-            <div class="product-info">
 
+            <div class="product-info">
                 <h1>{{ product}}</h1>
                 <p v-if="inStock">In Stock</p>
                 <p v-else>Out of Stock</p>
@@ -28,6 +28,14 @@
                <div v-for="variant in variants" :key="variant.variantId">
                    <p>{{ variant.variantColor }}</p>
                </div>
+
+               <button v-on:click="addToCart">Add to card </button>
+
+               <div class="cart">
+                   <p>Cart ({{ cart }})</p>
+               </div>
+
+               
             </div>
         </div>
     </div>
