@@ -33,7 +33,9 @@
                  
                </div>
 
-               <button v-on:click="addToCart" :disabled="!inStock">Add to card </button>
+               <button v-on:click="addToCart" 
+                       :disabled="!inStock"
+                       :class="{ disabledButton: !inStock }">Add to card </button>
 
                <div class="cart">
                    <p>Cart ({{ cart }})</p>
